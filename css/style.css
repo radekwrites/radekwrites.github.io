@@ -700,6 +700,7 @@ section {
     top: 60px;                    /* pod header */
     right: 0;
     width: 260px;                 /* šířka menu */
+    max-width: 100vw;
     height: calc(100vh - 60px);
     background-color: #13315c;
 
