@@ -626,7 +626,7 @@ section {
   #videos ul {
     flex-direction: column;
   }
-
+}
   /* ===== MOBILE MENU ===== */
   .nav-links {
     position: fixed;              /* vysouvací panel */
