@@ -708,7 +708,7 @@ section {
 
     transform: translateX(100%); /* skryté mimo obrazovku */
     transition: transform 0.3s ease;
-    z-index: 998;
+    z-index: 1000;
   }
 
   .show-nav-links {
