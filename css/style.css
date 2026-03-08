@@ -605,6 +605,24 @@ section {
   padding: 2px 0 !important;
   text-align: left !important;
   }
+}
+
+/* ===== MOBILE ≤ 900px ===== */
+@media (max-width: 900px) {
+
+  /* Portfolio, grafika, videa – zachovat */
+  #portfolio li {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1.5rem 0;
+  }
+  .graphic-portrait,
+  .graphic-landscape {
+    width: 100%;
+  }
+  #videos ul {
+    flex-direction: column;
+  }
 
   /* ===== MOBILE MENU ===== */
   .nav-links {
@@ -632,4 +650,14 @@ section {
     flex-direction: column;       /* položky pod sebou */
     width: 100%;
   }
- }
+
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  /* Hamburger viditelný jen na mobile */
+  .nav-menu {
+    display: block;
+  }
+}
