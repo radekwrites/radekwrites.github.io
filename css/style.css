@@ -611,10 +611,15 @@ section {
 @media (max-width: 900px) {
 
   /* Portfolio, grafika, videa – zachovat */
+  #portfolio div {
+    flex-direction: column;
+  }
+  
   #portfolio li {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 1.5rem 0;
+    overflow-wrap: break-word;
   }
   .graphic-portrait,
   .graphic-landscape {
