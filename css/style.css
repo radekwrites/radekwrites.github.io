@@ -378,6 +378,131 @@ section {
   }
 }
 
+@media (min-width: 1024px) {
+  section {
+    max-width: 1366px;
+    align-self: center;
+  }
+
+  p {
+    font-size: 12pt;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 54px !important;
+    width: 100%;
+    background-color: transparent;
+    font-size: 16pt;
+    z-index: 999;
+    transition: all;
+    transition-duration: 300ms;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav-bar,
+  .nav-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    max-width: 1366px !important;
+  }
+
+  .nav-bar {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .nav-logo img {
+    border-radius: 100%;
+    background-color: white;
+    margin-right: 0.5rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: unset;
+    position: static;
+    top: 0;
+    width: 100;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: unset;
+    position: static;
+    top: 0;
+    width: 100;
+    margin: 0;
+    padding: 0;
+    height: 52px;
+  }
+
+  .nav-links ul li a {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .nav-links ul li a:hover {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  #hero {
+    flex-direction: row;
+  }
+
+  .hero-text + .hero-image {
+    margin-left: 5rem;
+  }
+
+  #portfolio ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #portfolio li {
+    max-width: 30%;
+    margin: 1.6%;
+  }
+
+  #contact {
+    width: 100%;
+  }
+
+  #contact ul {
+    max-width: 512px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+}
+
   .nav-menu {
     display: none;
   }
