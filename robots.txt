@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://radekwrites.github.io/sitemap.xml
