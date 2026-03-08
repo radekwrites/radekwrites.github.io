@@ -650,7 +650,76 @@ section {
     flex-direction: column;       /* položky pod sebou */
     width: 100%;
   }
+  /* ===== MOBILE FIX ≤ 768px ===== */
 
+@media (max-width: 768px) {
+
+  /* HERO */
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  /* NAVBAR */
+  .nav-bar {
+    padding: 0 1rem;
+  }
+
+  /* SECTIONS */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* PORTFOLIO */
+  #portfolio div {
+    flex-direction: column;
+  }
+
+  #portfolio ul {
+    width: 100%;
+  }
+
+  #portfolio li {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1rem 0;
+  }
+
+  /* VIDEA */
+  #videos ul {
+    flex-direction: column;
+  }
+
+  #videos li {
+    width: 100%;
+  }
+
+  /* GRAFIKA */
+  #graphics ul {
+    flex-direction: column;
+  }
+
+  .graphic-portrait,
+  .graphic-landscape {
+    width: 100%;
+  }
+
+  #graphics img {
+    width: 100%;
+    height: auto;
+  }
+
+}
   .nav-links li {
     width: 100%;
     margin-bottom: 1rem;
