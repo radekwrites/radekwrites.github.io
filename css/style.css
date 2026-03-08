@@ -376,6 +376,7 @@ section {
   text-align: center;
   font-size: 12pt;
   }
+}
 
   .nav-menu {
     display: none;
@@ -660,4 +661,3 @@ section {
   .nav-menu {
     display: block;
   }
-}
