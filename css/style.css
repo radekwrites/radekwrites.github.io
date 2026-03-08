@@ -614,7 +614,6 @@ section {
   #portfolio div {
     flex-direction: column;
   }
-  
   #portfolio li {
     width: 100% !important;
     max-width: 100% !important;
