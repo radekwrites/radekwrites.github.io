@@ -246,7 +246,7 @@ section {
 .intro-sub {
     font-size: 1.25rem;       /* menší než hlavní text */
     font-weight: 500;         /* trochu tučnější, aby vynikl */
-    color: #134074;           /* tmavě modrá barva, sladěná s tématem */
+    color: #ffffff;            /* bílá pro maximální kontrast */
     margin-bottom: 1.5rem;    /* prostor pod podnadpisem */
     line-height: 1.5;         /* lepší čitelnost */
 }
