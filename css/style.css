@@ -238,9 +238,10 @@ section {
   margin: 0;
 }
 
-.job-text {
-  font-size: 1.5rem !important;
-  margin-bottom: 0.5rem;
+h2.job-text {
+    font-size: 1.5rem !important; /* flexibilní, ~24px */
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2;
 }
 
 .intro-sub {
