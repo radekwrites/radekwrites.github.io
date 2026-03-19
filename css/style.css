@@ -224,7 +224,6 @@ section {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1.5rem;
-  align-items: center;
 }
 
 /* Mobilní verze: Kontejner má 256px */
