@@ -267,6 +267,14 @@ h2.job-text {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.contact-micro {
+  font-size: 0.85rem;
+  color: #444;
+  margin-top: 0.4rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
 .logo-contact-wrapper {
     display: flex;
     flex-direction: column;   /* důležité */
