@@ -283,7 +283,7 @@ h2.job-text {
   color: #FFFFFF;
   margin-top: 0.4rem;
   display: block;        /* aby šířka byla plná a center align fungovalo */
-  text-align: center;    /* text uvnitř elementu */
+  text-align: left;    /* text uvnitř elementu */
 }
 
 .logo-contact-wrapper {
