@@ -271,6 +271,7 @@ h2.job-text {
   display: flex;
   flex-direction: column;
   align-items: center; /* klíčové */
+  width: 100%
 }
 
 .contact-micro {
