@@ -264,6 +264,7 @@ h2.job-text {
   padding: 0.75rem 1rem;   /* sjednoceno */
   border-radius: 9999px;
   text-align: center;
+  display: inline-block;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
