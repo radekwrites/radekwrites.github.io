@@ -272,7 +272,6 @@ h2.job-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;  /* ⬅️ tlačítko a mikrotext vlevo */
-  width: 100%;          /* aby vyplnilo prostor a centrování fungovalo */
   margin-top: 1rem;
 }
 
@@ -280,7 +279,7 @@ h2.job-text {
   font-size: 0.85rem;
   color: #FFFFFF;
   margin-top: 0.4rem;
-  padding-left: 1,5rem;
+  padding-left: 1.5rem;
 }
 
 .logo-contact-wrapper {
