@@ -271,7 +271,7 @@ h2.job-text {
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* vystředí tlačítko a mikrotext horizontálně */
+  align-items: flex-start;  /* ⬅️ tlačítko a mikrotext vlevo */
   width: 100%;          /* aby vyplnilo prostor a centrování fungovalo */
   margin-top: 1rem;
 }
@@ -281,7 +281,7 @@ h2.job-text {
   color: #FFFFFF;
   margin-top: 0.4rem;
   display: block;        /* aby šířka byla plná a center align fungovalo */
-  
+  text-align: left;         /* mikrotext vlevo */
 }
 
 .logo-contact-wrapper {
