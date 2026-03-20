@@ -271,7 +271,6 @@ h2.job-text {
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  
   width: 100%;          /* aby vyplnilo prostor a centrování fungovalo */
   margin-top: 1rem;
 }
