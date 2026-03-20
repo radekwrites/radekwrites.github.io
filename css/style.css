@@ -223,6 +223,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left; 
   margin-bottom: 1.5rem;
 }
 
