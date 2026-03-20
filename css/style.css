@@ -214,7 +214,7 @@ section {
 
 #hero {
   display: flex;
-  align-items: center; /* stejné vertikální zarovnání */
+  
   justify-content: center;
   gap: 1rem;
 }
@@ -222,8 +222,7 @@ section {
 .hero-text {
   display: flex;
   flex-direction: column;
-
-  
+  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
