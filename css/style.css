@@ -254,7 +254,7 @@ h2.job-text {
 }
 
 .intro-text {
-  text-align: justify;
+  text-align: left;
   margin-bottom: 1rem;
 }
 
