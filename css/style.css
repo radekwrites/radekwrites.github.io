@@ -271,11 +271,9 @@ h2.job-text {
 .contact-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;      /* centrování obsahu uvnitř wrapperu */
-  justify-content: center;  /* vertikálně pokud potřeba */
-  width: 100%;              /* důležité, aby wrapper zabíral plnou šířku rodiče */
-  margin: 0 auto;           /* vystředí wrapper v rámci rodiče */
-  text-align: center;       /* pro jistotu centrování textu uvnitř */
+  align-items: center;  /* vystředí tlačítko a mikrotext horizontálně */
+  width: 100%;          /* aby vyplnilo prostor a centrování fungovalo */
+  margin-top: 1rem;
 }
 
 .contact-micro {
