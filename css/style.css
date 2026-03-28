@@ -216,7 +216,7 @@ section {
   display: flex;
   align-items: center; /* stejné vertikální zarovnání */
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .hero-text {
