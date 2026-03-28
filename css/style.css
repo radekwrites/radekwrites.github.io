@@ -418,6 +418,11 @@ h2.job-text {
     align-items: center;
   }
 
+  {
+  .hero-text + .hero-image {
+    margin-left: 0 !important; /* přebije původní margin */
+  }
+
   .hero-image {
     margin: 0 auto; /* horizontálně na střed */
     width: 80%;
