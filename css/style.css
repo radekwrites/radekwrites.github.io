@@ -652,7 +652,8 @@ h2.job-text {
     display: block;
     margin-left: auto;
   }
-  
+}
+
 /* Verze pro počítač: Kontejner se zvětší na 512px */
 @media (min-width: 540px) {
   section {
