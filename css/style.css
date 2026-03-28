@@ -215,14 +215,15 @@ section {
 #hero {
   display: flex;
   align-items: center; /* stejné vertikální zarovnání */
-  justify-content: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 45%; 
   margin-bottom: 1.5rem;
 }
 
