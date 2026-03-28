@@ -415,6 +415,7 @@ h2.job-text {
   #hero {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .hero-image {
