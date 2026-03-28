@@ -419,6 +419,7 @@ h2.job-text {
   }
 
   .hero-image {
+    margin-left: 0;
     width: 100%;
     max-width: 320px;
   }
