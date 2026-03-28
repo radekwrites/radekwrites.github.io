@@ -223,7 +223,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 55%; 
   margin-bottom: 1.5rem;
 }
 
