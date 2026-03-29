@@ -724,3 +724,63 @@ h2.job-text {
     height: auto;
   }
 }
+
+/* Verze pro počítač: Kontejner se zvětší na 512px */
+@media (min-width: 540px) {
+  section {
+    padding-left: 5rem;
+    padding-right: 5rem;
+   }
+  
+  h2 {
+    font-size: 36px;
+  }
+
+  .name-text {
+    font-size: 64pt !important;
+  }
+
+  .job-text {
+    font-size: 28pt !important;
+  }
+
+  .contact-button {
+    font-size: 16pt;
+    width: max-content;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .hero-image {
+    width: 512px;
+  }
+
+  #portfolio ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;  
+  }
+
+#portfolio .port-title-description {
+    display: block !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+    text-align: left !important;
+}
+
+  #portfolio li {
+    max-width: 45%;
+    margin: 2.5%;
+  }
+
+  #contact ul {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  footer p {
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
+  }
+}
