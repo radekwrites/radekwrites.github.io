@@ -484,6 +484,10 @@ h2.job-text {
   width: calc(50% - 0.75rem);  /* 2 vedle sebe */
 }
 
+.graphic-wrapper {
+    margin-bottom: 12px;
+}
+
 /* ===== SPODNÍ OBRÁZEK (1123 × 842) ===== */
 .graphic-landscape {
   width: 100%;                 /* Přes celou šířku */
