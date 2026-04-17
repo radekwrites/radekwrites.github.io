@@ -1014,8 +1014,7 @@ h2.job-text {
   }
 
  .blog-post-full {
-    margin: 0;
-    max-width: 100%;
+    padding: 1.5rem 1rem;
   }
 
   /* VIDEA */
