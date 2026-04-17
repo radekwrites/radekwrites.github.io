@@ -239,11 +239,9 @@ header {
 
 /* H1 – hlavní nadpis */
 .blog-post-full h1 {
-    font-size: 5rem; /* větší */
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 0.8rem 0;
-    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.25;
+    margin-bottom: 1rem;
 }
 
 /* H2 – sekční nadpis */
