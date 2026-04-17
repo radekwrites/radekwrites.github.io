@@ -248,8 +248,9 @@ header {
 .blog-post-full h2 {
     font-size: 1.8rem;
     font-weight: 600;
-    margin-top: 0rem;      /* ⬅️ zmenšit */
-    margin-bottom: 0rem;
+    margin-top: 2rem;     /* prostor NAD sekcí */
+    margin-bottom: 0.6rem; /* menší mezera POD */
+    line-height: 1.3;
     color: #ffffff; /* lehce světlejší modrá pro hierarchii */
 }
 
