@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 *,
 ::after,
@@ -15,6 +15,10 @@ p {
   font-size: 12pt;
   line-height: normal;
   margin: 0;
+}
+
+:root {
+  --header-height: 60px;
 }
 
 body {
@@ -34,7 +38,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent;
+  background-color: #13315c;
   z-index: 999;
 }
 
@@ -56,6 +60,21 @@ header {
   color: white;
   white-space: nowrap;
   text-decoration: none;
+}
+
+.nav-left {
+  display: flex;
+  padding-left: 3rem; /* stejné jako blog-post-full */
+  align-items: center;
+  height: 100%;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  opacity: 0.9;
 }
 
 .nav-links ul {
@@ -100,18 +119,295 @@ header {
     align-items: center;
   }
 
+  /* Základní nastavení pro dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    /* display: flex zde NESMÍ BÝT, aby menu bylo v základu skryté */
+    display: none !important; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: row;      
+    white-space: nowrap; 
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    list-style: none;
+    z-index: 1000;
+}
+
+/* Odstranění borderu a základní styling pro vnořené odkazy */
+.dropdown-menu li a {
+    padding: 0.5rem !important;
+    transition: all 0.3s ease;      /* Plynulý přechod efektů */
+}
+
+/* Zvýraznění při najetí myší (hover) */
+.dropdown-menu li a:hover {
+    background-color: #f8f8f8;    /* Jemné pozadí pod odkazem */
+    border-bottom: none !important; /* Odstranění bílé linky */
+    text-shadow: 0 0 0.5px currentColor;
+}
+
+/* Zobrazení menu při hoveru */
+.dropdown:hover .dropdown-menu {
+    display: flex !important; /* Aktivuje se až při najetí */
+    background-color: #1c77c7;
+}
+
+/* Wrapper kolem obrázku */
+.blog-image-wrapper {
+    overflow: hidden;           /* zabrání vyčnívání obrázku */
+    border-radius: 0px;        /* jemně zaoblené rohy */
+    margin-bottom: 2rem;        /* prostor mezi obrázkem a textem */
+    max-width: 100%;            /* responsive, nepřeteče kontejner */
+}
+
+/* Obrázek samotný */
+.blog-image-wrapper img {
+    width: 100%;                /* zabere celý wrapper */
+    max-height: 250px;          /* menší než full hero, UX-friendly */
+    object-fit: cover;          /* zachová proporce, přizpůsobí oříznutí */
+    display: block;
+    transition: transform 0.3s ease; /* efekt při hover (volitelné) */
+}
+
+/* ===== BLOG TYPO FIX ===== */
+
+#blog .blog-content h1 {
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+#blog .blog-content h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+#blog .blog-content p {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+#blog .blog-content .item {
+  margin-bottom: 1rem;
+}
+
+/* Volitelný hover efekt pro jemné zoomování */
+.blog-image-wrapper img:hover {
+    transform: scale(1.03);
+}
+
+#blog .blog-content {
+    font-family: 'Inter', sans-serif;
+}
+
+#blog .blog-content {
+    background-color: #0f365f;  /* světlejší modrý box */
+    padding: 1.5rem;
+}
+
+/* Blog odrážky */
+#blog .port-inner-list {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+}
+
+#blog .port-inner-list li {
+  list-style-type: disc !important;
+  display: list-item !important;
+}
+
+/* BLOG TYPOGRAPHY */
+
+#blog-post {
+  padding-top: calc(var(--header-height) + 3rem);
+}
+
+.blog-post-full {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 3rem 2rem 3rem;
+    line-height: 1.7;
+    font-family: 'Inter', sans-serif;
+    background-color: #0f365f; /* tvůj světlejší modrý */
+    color: #ffffff; /* vše bílé */
+    border-radius: 0px;
+}
+
+/* H1 – hlavní nadpis */
+.blog-post-full h1 {
+    font-size: 5rem; /* větší */
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.8rem 0;
+    color: #ffffff;
+}
+
+/* H2 – sekční nadpis */
+.blog-post-full h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 0rem;      /* ⬅️ zmenšit */
+    margin-bottom: 0rem;
+    color: #ffffff; /* lehce světlejší modrá pro hierarchii */
+}
+
+/* H3 – podsekce */
+.blog-post-full h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 0.2rem;      /* ⬅️ zmenšit */
+    margin-bottom: 0.2rem;
+    color: #ffffff;
+}
+
+/* Odstavce */
+.blog-post-full p {
+    font-size: 1.05rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+}
+
+/* Seznamy */
+.blog-post-full ul {
+    padding-left: 1.5rem;
+}
+
+.blog-post-full li {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+/* Zvýraznění */
+.blog-post-full strong {
+    font-weight: 600;
+    color: #ffffff; 
+}
+
+/* CTA tlačítko */
+.blog-post-full .btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    background-color: #134074;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.blog-post-full .btn:hover {
+    background-color: #0f3057;
+}
+
+/* Meta info */
+.blog-meta {
+    font-size: 0.9rem;
+    color: #b3d1ff;
+    margin-bottom: 1.5rem !important;
+}
+
+.check-list {
+  list-style: none;        /* odrážky se odstraní, budeme používat ::before */
+  padding-left: 1.5rem;    /* odsazení textu, aby nebyl úplně vlevo */
+  margin: 0;
+}
+
+.check-list li::before {
+  content: "✔";
+  color: #00c853;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+  gap: 0.4rem;           /* stejné místo pro všechny fajfky */
+  margin-left: -1.5rem;    /* posune fajfku ven z paddingu */
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.cross-list {
+  list-style: none;        /* odrážky se odstraní, budeme používat ::before */
+  padding-left: 1.5rem;    /* odsazení textu, aby nebyl úplně vlevo */
+  margin: 0;
+}
+
+.cross-list li::before {
+  content: "X";
+  color: #ff3b30;
+  font-weight: bold;
+  font-size: 1.2rem;    
+  display: inline-block;
+  gap: 0.4rem;            /* stejné místo pro všechny fajfky */
+  margin-left: -1.5rem;    /* posune fajfku ven z paddingu */
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.cross-list li,
+.check-list li {
+  margin-bottom: 0.15rem;
+  line-height: 1.4;
+}
+
+/* Kompaktní seznamy */
+.tight-list {
+  list-style: disc;      /* klasické puntíky */
+  padding-left: 1.5rem;  /* odsazení, aby byly vidět */
+  margin: 0.5rem 0;   /* menší mezera kolem */
+}
+
+.tight-list li {
+  margin-bottom: 0.2rem;  /* malá mezera mezi řádky */
+  line-height: 1.6;       /* menší řádkování */
+}
+
+.blog-post-full p.gray-bg {
+  background-color: #555;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.blog-post-full p.red-bg {
+  background-color: #EE0000;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.blog-post-full p.highlight-1 {
+ background-color: #383838;
+ color: white;
+ padding: 8px 12px;
+ border-radius: 5px;
+ display: inline-block;
+}
+
+.tight {
+  margin-top: 0rem;
+}
+
+/* Tipy pro další úpravy */
+
 footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-left: 4rem;
   padding-right: 4rem;
   height: 64px;
   box-sizing: border-box;
-
   background-color: #13315c;
 }
 
@@ -253,11 +549,6 @@ h2.job-text {
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-.intro-text {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
 .contact-button {
   background-color: #EE0000;
   color: white;
@@ -266,6 +557,19 @@ h2.job-text {
   text-align: center;
   display: inline-block;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-mail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EE0000;
+  color: white;
+  padding: 0.6rem 1.25rem;
+  margin-top: 1rem;
+  border-radius: 9999px;
+  text-decoration: none; /* důležité */
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .contact-wrapper {
@@ -660,6 +964,13 @@ h2.job-text {
 
 /* ===== MOBILE FIX ≤ 768px ===== */
 @media (max-width: 768px) {
+
+/* Responzivní úprava pro mobilní zařízení */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px; /* Odsazení podpoložek v mobilním menu */
+  }
 
   /* HERO */
   #hero {
