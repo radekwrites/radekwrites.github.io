@@ -1013,6 +1013,10 @@ h2.job-text {
     margin: 0 0 1rem 0;
   }
 
+  .blog-post-full {
+    padding: 1.5rem 1rem;
+  }
+
   /* VIDEA */
   #videos ul {
     flex-direction: column;
