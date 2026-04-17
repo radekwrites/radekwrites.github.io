@@ -266,9 +266,8 @@ header {
 /* Odstavce */
 .blog-post-full p {
     font-size: 1.05rem;
-    line-height: 1.2;
-    margin-bottom: 0.4rem;
-    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
 }
 
 /* Seznamy */
