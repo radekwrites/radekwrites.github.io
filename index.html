@@ -30,23 +30,95 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Radek Fiedor",
-      "jobTitle": "SEO Copywriter & Content Creator",
-      "url": "https://radekwrites.github.io/",
-      "image": "https://radekwrites.github.io/assets/images/radek-fiedor-copywriter-content-creator.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Helsa",
-        "addressCountry": "DE"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/radek-fiedor-73b8793b6",
-        "https://x.com/jannovak"
-      ]s
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://radekwrites.github.io/#person",
+          "name": "Radek Fiedor",
+          "jobTitle": "SEO Copywriter & Content Creator",
+          "url": "https://radekwrites.github.io/",
+          "image": "https://radekwrites.github.io/assets/images/radek-fiedor-copywriter-content-creator.png",
+          "description": "SEO copywriter a content creator pro B2B, SaaS, e-commerce a digitální značky v Německu.",
+          "email": "mailto:radek.fiedor@gmx.net",
+          "telephone": "+49 152 09691895",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Helsa",
+            "addressRegion": "Hessen",
+            "addressCountry": "DE"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/radek-fiedor-73b8793b6",
+            "https://x.com/jannovak"
+          ],
+          "knowsAbout": [
+            "SEO Copywriting",
+            "B2B Copywriting",
+            "Content Marketing",
+            "Storytelling",
+            "LinkedIn Content",
+            "Landing Page Copywriting",
+            "UX Writing",
+            "Conversion Copywriting",
+            "Content Strategy"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://radekwrites.github.io/#service-seo-copywriting",
+          "serviceType": "SEO Copywriting",
+          "name": "SEO Copywriting pro B2B a e-commerce",
+          "provider": {
+            "@id": "https://radekwrites.github.io/#person"
+          },
+          "url": "https://radekwrites.github.io/de/",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Germany"
+            },
+            {
+              "@type": "Country",
+              "name": "Czech Republic"
+            }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "B2B companies, SaaS brands, e-commerce businesses"
+          },
+          "description": "SEO optimalizované texty, landing pages, LinkedIn content a obsahové strategie zaměřené na růst organické návštěvnosti a konverzí."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://radekwrites.github.io/#website",
+          "url": "https://radekwrites.github.io/",
+          "name": "Radek Writes",
+          "publisher": {
+            "@id": "https://radekwrites.github.io/#person"
+          },
+          "inLanguage": [
+            "de",
+            "en",
+            "cs"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://radekwrites.github.io/de/#webpage",
+          "url": "https://radekwrites.github.io/de/",
+          "name": "SEO Copywriter & Content Creator pro B2B a e-commerce",
+          "isPartOf": {
+            "@id": "https://radekwrites.github.io/#website"
+          },
+          "about": {
+            "@id": "https://radekwrites.github.io/#person"
+          },
+          "description": "Portfolio a služby SEO copywritera a content creatora Radka Fiedora.",
+          "inLanguage": "de"
+        }
+      ]
     }
-    </script>
-
+</script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WPVF8C2PTX"></script>
 <script>
