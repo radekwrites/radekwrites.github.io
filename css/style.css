@@ -855,6 +855,12 @@ h2.job-text {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  /* 🛠️ OPRAVA PROTI OŘEZÁVÁNÍ */
+  padding-right: 0.2em; /* Dá textu na konci řádku prostor dýchat */
+  padding-bottom: 0.1em; /* Ochrana pro spodní tahy písmen (g, y, p) */
+  margin-right: -0.2em; /* Kompenzace paddingu, aby kód neposouval okolní prvky */
+  overflow: visible !important; /* Vynutí, aby přetékající gradient nezmizel */
+
   /* 🛠️ OPRAVA PRO VÍCEŘÁDKOVÝ TEXT */
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone; /* Zajistí, že se gradient aplikuje na každý řádek zvlášť a neutrhne se */
