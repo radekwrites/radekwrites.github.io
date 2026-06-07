@@ -526,10 +526,16 @@ section {
 }
 
 .name-text {
-  font-size: 30pt;
-  font-weight: bold;
-  line-height: normal;
-  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0 0 1rem 0;
+
+  max-width: 11ch;
+  text-wrap: balance;
+
+  color: #ffffff;
 }
 
 h2.job-text {
