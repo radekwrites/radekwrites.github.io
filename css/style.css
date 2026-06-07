@@ -526,15 +526,13 @@ section {
 }
 
 .name-text {
-  font-size: clamp(2.8rem, 7vw, 6rem);
+  font-size: clamp(1.9rem, 4vw, 4.2rem);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
   margin: 0 0 1rem 0;
-
-  max-width: 11ch;
+  max-width: 14ch;
   text-wrap: balance;
-
   color: #ffffff;
 }
 
