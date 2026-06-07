@@ -526,12 +526,12 @@ section {
 }
 
 .name-text {
-  font-size: clamp(1.9rem, 4vw, 4.2rem);
+  font-size: clamp(1.9rem, 4vw, 3.8rem); /* Bezpečné fluidní písmo */
   font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.2;                      /* Vyšší řádkování, aby se text netlačil */
+  letter-spacing: -0.02em;
   margin: 0 0 1rem 0;
-  max-width: 14ch;
+  max-width: 100%;                       /* 🛠️ OPRAVA: Zrušeno 14ch, text má plnou šířku */
   text-wrap: balance;
   color: #ffffff;
 }
@@ -844,10 +844,13 @@ h2.job-text {
 }
 
 .text-gradient {
-  display: block; /* Nebo inline, pokud je uvnitř jiného textu, ale NIKDY inline-block */
+  display: inline-block;                 /* Stabilní pro gradient text */
   width: 100%;
-  background: linear-gradient(270deg, #eef4ed, #134074);
-  background-size: 300% 300%;
+  
+  /* 🛠️ OPRAVA BARVY: Místo tmavé modré dáváme světle modrou, aby text nemizel v pozadí */
+  background: linear-gradient(270deg, #eef4ed, #4ba3ff);
+  background-size: 200% auto;            /* Menší velikost pro plynulejší animaci */
+  
   -webkit-animation: AnimationName 7s ease infinite;
   animation: AnimationName 7s ease infinite;
   
@@ -855,15 +858,11 @@ h2.job-text {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* 🛠️ OPRAVA PROTI OŘEZÁVÁNÍ */
-  padding-right: 0.2em; /* Dá textu na konci řádku prostor dýchat */
-  padding-bottom: 0.1em; /* Ochrana pro spodní tahy písmen (g, y, p) */
-  margin-right: -0.2em; /* Kompenzace paddingu, aby kód neposouval okolní prvky */
-  overflow: visible !important; /* Vynutí, aby přetékající gradient nezmizel */
-
-  /* 🛠️ OPRAVA PRO VÍCEŘÁDKOVÝ TEXT */
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone; /* Zajistí, že se gradient aplikuje na každý řádek zvlášť a neutrhne se */
+  /* Bezpečnostní zóny proti oříznutí okrajů písmen */
+  padding-right: 0.2em; 
+  padding-bottom: 0.1em;
+  margin-right: -0.2em;
+  overflow: visible !important;
 }
 
 @-webkit-keyframes AnimationName {
