@@ -42,10 +42,11 @@ header {
   z-index: 999;
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;  /* logo a text na stejné ose */
-  gap: 0.5rem;          /* mezera mezi obrázkem a textem */
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain; /* Zajistí, že se logo nedeformuje */
+  /* Odstranili jsme border-radius a background-color */
 }
 
 .nav-logo img {
