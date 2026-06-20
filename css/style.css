@@ -624,12 +624,27 @@ textarea {
     width: 100%;
 }
 
+#contact-info input[type="text"],
+#contact-info input[type="email"],
+#contact-info textarea {
+    background-color: rgba(212, 212, 255, 0.06) !important;
+}
+
 #contact-info input:-webkit-autofill,
 #contact-info input:-webkit-autofill:hover,
-#contact-info input:-webkit-autofill:focus {
-    -webkit-text-fill-color: #ffffff;
-    -webkit-box-shadow: 0 0 0px 1000px rgba(212, 212, 255, 0.06) inset;
+#contact-info input:-webkit-autofill:focus,
+#contact-info input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(212, 212, 255, 0.06) inset !important;
+    box-shadow: 0 0 0px 1000px rgba(212, 212, 255, 0.06) inset !important;
+    background-color: rgba(212, 212, 255, 0.06) !important;
     transition: background-color 5000s ease-in-out 0s;
+    caret-color: #ffffff;
+}
+
+#contact-info textarea:-webkit-autofill {
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(212, 212, 255, 0.06) inset !important;
 }
 
 input[type="text"]:focus,
