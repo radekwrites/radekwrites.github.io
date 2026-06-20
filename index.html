@@ -23,6 +23,7 @@
     <meta name="twitter:description" content="Portfolio von Radek – Content Creator und Copywriter.">
     <meta name="twitter:image" content="https://i.postimg.cc/8zMCscDr/deepsea.png">
     <link rel="icon" href="assets/icons/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="apple-touch-icon" href="/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/aos.css">
@@ -179,7 +180,7 @@
         <li class="nav-links-item"><a href="#portfolio">Leistungen</a></li>
         <li class="nav-links-item"><a href="#videos">Videos</a></li>
         <li class="nav-links-item"><a href="#graphics">Grafiken</a></li>
-        <li class="nav-links-item"><a href="/de/geschichtenerzaehlen.html">Blog</a></li>
+        <li class="nav-links-item"><a href="/de/blog/blog-index.html">Blog</a></li>
         <li class="nav-links-item"><a href="#contact-info">Kontakt</a></li>
         </ul>
         
@@ -385,45 +386,76 @@
 
 <!-- ================= CONTACT SECTION ================= -->
 <section id="contact-info">
-<div class="logo-contact-wrapper">
-    <div class="logo-contact-container">
-        <h2 class="text-gradient" data-aos="fade-up">Kontakt</h2>
-            <!-- LinkedIn logo místo původního loga -->
-                <a href="https://www.linkedin.com/in/radek-fiedor-73b8793b6" target="_blank" rel="noopener noreferrer">
-                <img src="assets/icons/linkedin.png" width="128" height="128" alt="LinkedIn profil" class="logo" loading="lazy" />
-                </a>
-                <address class="contact-list">
-                    <ul>
-                    <li>
-                        <img class="contact-icon" src="assets/icons/user.svg" alt="Name" loading="lazy" />
-                        <p>Radek Fiedor</p>
-                    </li>
-                    <li>
-                        <img class="contact-icon" src="assets/icons/building.svg" alt="Standort" loading="lazy" />
-                        <p>Helsa, Hessen</p>
-                    </li>
-                    <li>
-                        <img class="contact-icon" src="assets/icons/phone.svg" alt="Telefon" loading="lazy" />
-                        <p><a href="tel:+4915209691895">+49 152 09691895</a></p>
-                    </li>
-                    <li>
-                        <img class="contact-icon" src="assets/icons/mail.svg" alt="E-Mail" loading="lazy" />
-                        <p><a href="mailto:radek.fiedor@gmx.net">radek.fiedor@gmx.net</a></p>
-                    </li>
-                    <li>
-                        <img class="contact-icon" src="assets/icons/calendar.svg" alt="Zeitraum" loading="lazy" />
-                        <p>2015 – heute</p>
-                    </li>
+    <h2 class="text-gradient" data-aos="fade-up">Kontakt</h2>
+
+    <div class="inner">
+
+        <section data-aos="fade-up">
+            <form id="contact-form" novalidate>
+                <div class="fields">
+                    <div class="field half">
+                        <label for="name">Name</label>
+                        <input type="text" name="user_name" id="name" required />
+                    </div>
+                    <div class="field half">
+                        <label for="email">Email</label>
+                        <input type="email" name="user_email" id="email" required />
+                    </div>
+                    <div class="field">
+                        <label for="message">Nachricht</label>
+                        <textarea name="message" id="message" rows="6" required></textarea>
+                    </div>
+                </div>
+
+                <ul class="actions">
+                    <li><input type="submit" value="Nachricht senden" class="primary" id="cf-submit" /></li>
                 </ul>
-            </address>
-        </div>
+
+                <p id="cf-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="split" data-aos="fade-up">
+             <section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-user"></span>
+                    <h3>Name</h3>
+                    <span>Radek Fiedor</span>
+                </div>
+            </section>
+            <section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-phone"></span>
+                    <h3>Telefon</h3>
+                    <a href="tel:+4915209691895">+49 152 09691895</a>
+                </div>
+            </section>
+            <section>
+                <div class="contact-method">
+                    <a href="https://www.linkedin.com/in/radek-fiedor-73b8793b6" target="_blank" rel="noopener noreferrer">
+                       <span class="icon brands alt fa-linkedin-in"></span>
+                       <h3>LinkedIn</h3>
+                       <span>Radek Fiedor</span>
+                    </a>
+                </div>
+            </section>
+            <section>
+                <div class="contact-method">
+                    <span class="icon solid alt fa-home"></span>
+                    <h3>Standort</h3>
+                    <span>Helsa, Hessen<br />Deutschland</span>
+                </div>
+            </section>
+        </section>
+
     </div>
 </section>
-
+        
 </main>
 
+<!-- Footer -->
 <footer>
-    <p>© 2015–2026 Radek</p>
+    <p>© 2015 Radek</p>
 </footer>
 
 <script src="js/aos.js"></script>
@@ -433,8 +465,41 @@
         delay: 0
     });
 </script>
+
 <script src="js/main.js"></script>
 
-</body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init("SpDTmZcmZmu-u5jXq");
 
+    const cfForm = document.getElementById('contact-form');
+    const cfStatus = document.getElementById('cf-status');
+    const cfSubmit = document.getElementById('cf-submit');
+
+    cfForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        cfSubmit.disabled = true;
+        cfSubmit.value = 'Wird gesendet...';
+        cfStatus.textContent = '';
+        cfStatus.className = 'form-status';
+
+        emailjs.sendForm('service_ve2kbrx', 'template_8y077nk', cfForm)
+            .then(function () {
+                cfStatus.textContent = 'Danke! Ihre Nachricht wurde gesendet.';
+                cfStatus.classList.add('form-status-success');
+                cfForm.reset();
+            })
+            .catch(function (error) {
+                cfStatus.textContent = 'Fehler beim Senden. Bitte versuchen Sie es per E-Mail.';
+                cfStatus.classList.add('form-status-error');
+                console.error('EmailJS error:', error);
+            })
+            .finally(function () {
+                cfSubmit.disabled = false;
+                cfSubmit.value = 'Nachricht senden';
+            });
+    });
+</script>
+</body>
 </html>
