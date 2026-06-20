@@ -318,7 +318,7 @@
         cfSubmit.value = 'Sending...';
         cfStatus.textContent = '';
         cfStatus.className = 'form-status';
-        emailjs.sendForm('service_ve2kbrx', '', cfForm)
+        emailjs.sendForm('service_ve2kbrx', 'template_8y077nk', cfForm)
             .then(function () {
                 cfStatus.textContent = 'Thank you! Your message has been sent.';
                 cfStatus.classList.add('form-status-success');
