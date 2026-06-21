@@ -277,7 +277,7 @@
 <script src="../js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-    emailjs.init("");
+    emailjs.init("SpDTmZcmZmu-u5jXq");
     const cfForm = document.getElementById('contact-form');
     const cfStatus = document.getElementById('cf-status');
     const cfSubmit = document.getElementById('cf-submit');
@@ -287,7 +287,7 @@
         cfSubmit.value = 'Odesílám...';
         cfStatus.textContent = '';
         cfStatus.className = 'form-status';
-        emailjs.sendForm('', '', cfForm)
+        emailjs.sendForm('service_ve2kbrx', 'template_8y077nk', cfForm)
             .then(function () {
                 cfStatus.textContent = 'Děkuji! Vaše zpráva byla odeslána.';
                 cfStatus.classList.add('form-status-success');
