@@ -275,6 +275,34 @@
     AOS.init({ once: true, delay: 0 });
 </script>
 <script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    emailjs.init("");
+    const cfForm = document.getElementById('contact-form');
+    const cfStatus = document.getElementById('cf-status');
+    const cfSubmit = document.getElementById('cf-submit');
+    cfForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        cfSubmit.disabled = true;
+        cfSubmit.value = 'Odesílám...';
+        cfStatus.textContent = '';
+        cfStatus.className = 'form-status';
+        emailjs.sendForm('', '', cfForm)
+            .then(function () {
+                cfStatus.textContent = 'Děkuji! Vaše zpráva byla odeslána.';
+                cfStatus.classList.add('form-status-success');
+                cfForm.reset();
+            })
+            .catch(function (error) {
+                cfStatus.textContent = 'Při odesílání došlo k chybě. Zkuste mě prosím kontaktovat e-mailem.';
+                cfStatus.classList.add('form-status-error');
+                console.error('EmailJS error:', error);
+            })
+            .finally(function () {
+                cfSubmit.disabled = false;
+                cfSubmit.value = 'Odeslat zprávu';
+            });
+    });
+</script>
 </body>
-
 </html>
