@@ -479,36 +479,35 @@
     cfForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const nameInput = cfForm.querySelector('input[name="name"]');
-        const emailInput = cfForm.querySelector('input[name="email"]');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
 
-        const name = nameInput ? nameInput.value.trim() : '';
-        const email = emailInput ? emailInput.value.trim() : '';
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
 
-        // základní kontrola emailu
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (!name && !email) {
-            cfStatus.textContent = 'Bitte geben Sie Ihren Namen und Ihre E-Mail-Adresse ein.';
-            cfStatus.className = 'form-status form-status-error';
-            return;
-        }
-
+        // NAME
         if (!name) {
             cfStatus.textContent = 'Bitte geben Sie Ihren Namen und Nachnamen ein.';
             cfStatus.className = 'form-status form-status-error';
+            nameInput.focus();
             return;
         }
 
+        // EMAIL EMPTY
         if (!email) {
             cfStatus.textContent = 'Bitte geben Sie Ihre E-Mail-Adresse ein.';
             cfStatus.className = 'form-status form-status-error';
+            emailInput.focus();
             return;
         }
 
+        // EMAIL FORMAT
         if (!emailPattern.test(email)) {
             cfStatus.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
             cfStatus.className = 'form-status form-status-error';
+            emailInput.focus();
             return;
         }
 
