@@ -479,6 +479,39 @@
     cfForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        const nameInput = cfForm.querySelector('input[name="name"]');
+        const emailInput = cfForm.querySelector('input[name="email"]');
+
+        const name = nameInput ? nameInput.value.trim() : '';
+        const email = emailInput ? emailInput.value.trim() : '';
+
+        // základní kontrola emailu
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name && !email) {
+            cfStatus.textContent = 'Bitte geben Sie Ihren Namen und Ihre E-Mail-Adresse ein.';
+            cfStatus.className = 'form-status form-status-error';
+            return;
+        }
+
+        if (!name) {
+            cfStatus.textContent = 'Bitte geben Sie Ihren Namen und Nachnamen ein.';
+            cfStatus.className = 'form-status form-status-error';
+            return;
+        }
+
+        if (!email) {
+            cfStatus.textContent = 'Bitte geben Sie Ihre E-Mail-Adresse ein.';
+            cfStatus.className = 'form-status form-status-error';
+            return;
+        }
+
+        if (!emailPattern.test(email)) {
+            cfStatus.textContent = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
+            cfStatus.className = 'form-status form-status-error';
+            return;
+        }
+
         cfSubmit.disabled = true;
         cfSubmit.value = 'Wird gesendet...';
         cfStatus.textContent = '';
@@ -491,7 +524,7 @@
                 cfForm.reset();
             })
             .catch(function (error) {
-                cfStatus.textContent = 'Fehler beim Senden. Bitte versuchen Sie es per E-Mail.';
+                cfStatus.textContent = 'Fehler beim Senden. Bitte versuchen Sie es später erneut oder per E-Mail.';
                 cfStatus.classList.add('form-status-error');
                 console.error('EmailJS error:', error);
             })
