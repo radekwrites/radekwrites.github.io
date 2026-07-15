@@ -240,18 +240,20 @@
             <form id="contact-form" novalidate>
                 <div class="fields">
                     <div class="field half">
-                        <label for="name">Jméno</label>
+                        <label for="name">Jméno*</label>
                         <input type="text" name="user_name" id="name" required />
                     </div>
                     <div class="field half">
-                        <label for="email">E-mail</label>
+                        <label for="email">E-mail*</label>
                         <input type="email" name="user_email" id="email" required />
                     </div>
                     <div class="field">
-                        <label for="message">Zpráva</label>
+                        <label for="message">Zpráva*</label>
                         <textarea name="message" id="message" rows="6" required></textarea>
                     </div>
                 </div>
+
+                <p class="required-note">Pole označená * jsou povinná.</p>
 
                 <ul class="actions">
                     <li><input type="submit" value="Odeslat zprávu" class="primary" id="cf-submit" /></li>
