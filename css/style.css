@@ -1215,21 +1215,23 @@ button:disabled {
   border-radius: 0.5rem;
 }
 
-/* ===== VIDEO 9:16 ===== */
+/* ===== VIDEO LAZY YOUTUBE ===== */
 .video-wrapper {
   position: relative;
-  padding-bottom: 177.78%;     /* Poměr 9:16 */
-  height: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.video-wrapper iframe {
+.video-wrapper iframe,
+.video-wrapper lite-youtube {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  display: block;
   border: none;
 }
 
