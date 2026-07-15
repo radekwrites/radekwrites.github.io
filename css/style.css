@@ -1235,11 +1235,7 @@ button:disabled {
   border: none;
 }
 
-lite-youtube {
-  background-position: center;
-  background-size: cover;
-  border-radius: 0.5rem;
-}
+
 
 lite-youtube::before {
   display: none !important;
