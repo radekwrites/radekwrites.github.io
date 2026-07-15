@@ -1235,7 +1235,9 @@ button:disabled {
   border: none;
 }
 
-
+lite-youtube {
+  max-width: none !important;
+}
 
 lite-youtube::before {
   display: none !important;
