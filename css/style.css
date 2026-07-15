@@ -1233,6 +1233,10 @@ button:disabled {
   border: none;
 }
 
+lite-youtube {
+  --lite-youtube-border-radius: 0 !important;
+}
+
 /* ===== SEKCE GRAFIKA ===== */
 #graphics h2 {
   text-align: center;
