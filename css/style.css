@@ -1222,6 +1222,7 @@ button:disabled {
   height: 0;
   overflow: hidden;
   margin-bottom: 1rem;
+  border-radius: 0 !important;
 }
 
 .video-wrapper lite-youtube {
