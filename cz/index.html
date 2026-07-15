@@ -24,8 +24,9 @@
     <link rel="icon" href="../assets/icons/favicon.ico" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="apple-touch-icon" href="/logo.png">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.css">
     <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -49,6 +50,7 @@
 
   gtag('config', 'G-WPVF8C2PTX');
 </script>
+<script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed/src/lite-yt-embed.js"></script>
 </head>
 
 <body>
@@ -155,43 +157,88 @@
 <section id="videos">
     <h2 class="text-gradient" data-aos="fade-up">YouTube videa</h2>
     <p class="section-intro">
-    Vybrané video projekty z oblasti copywritingu, tvorby obsahu a komunikace značky. 
-    Zaměřuji se na vyprávění příběhu, jasné sdělení a obsah s vysokou konverzní účinností.
+        Vybrané video projekty z oblasti copywritingu, tvorby obsahu a firemní komunikace.
+        Důraz je kladen na storytelling, srozumitelné sdělení a obsah zaměřený na vysokou míru konverze.
     </p>
-    <ul>
-        <li data-aos="fade-up">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/9HazzZ8huzs" title="Pizza Toscana prezentace" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <h3 class="port-title-text">
-                <a href="https://www.youtube.com/watch?v=9HazzZ8huzs" target="_blank">Pizza Toscana</a>
-            </h3>
-            <p class="port-title-description">Individuální návrh prezentace pro fiktivní gastronomickou značku Pizza Toscana. Hlavní důraz je kladen na vyprávění příběhu, vizuální dramaturgii a copywriting zaměřený na cílovou skupinu. 
-            Koncept, text a realizace pocházejí z jedné ruky s důrazem na sdělení značky a emocionální působivost.</p>
-            </li>
-        <li data-aos="fade-up">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/gUInzYV5f_Q" title="Prezentace značky rtěnky" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <h3 class="port-title-text">
-                <a href="https://www.youtube.com/watch?v=gUInzYV5f_Q" target="_blank">Rtěnka</a>
-            </h3>
-            <p class="port-title-description">Kreativní prezentace značky pro kolekci rtěnek s důrazem na branding a vyprávění příběhu. Obsahuje optimalizovaný obsah pro sociální sítě a reklamní kampaně, včetně textů a vizuální realizace. 
-            Cílem bylo jasně komunikovat sdělení značky a učinit produkt emocionálně prožitelným.</p>
-            </li>
-        <li data-aos="fade-up">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/YR9551gJP6M" title="CAN Pilot detekční zařízení prezentace" loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <h3 class="port-title-text">
-                <a href="https://www.youtube.com/watch?v=YR9551gJP6M" target="_blank">CAN Pilot</a>
-            </h3>
-            <p class="port-title-description">Prezentace detekčního zařízení CAN Pilot se zaměřením na technické funkce a použití. Přístup orientovaný na vyprávění příběhu, aby byly výhody produktu jasně a atraktivně prezentovány. 
-            Obsah byl koncipován, napsán a vizualizován tak, aby oslovil cílovou skupinu přímo a budoval důvěru.</p>
-            </li>
-    </ul>
-</section>
 
+    <div>
+        <ul>
+
+            <li data-aos="fade-up">
+                <div class="video-wrapper">
+                    <lite-youtube
+                        videoid="9HazzZ8huzs"
+                        playlabel="Pizza Toscana – Storytelling a prezentace značky pro gastronomii">
+                    </lite-youtube>
+                </div>
+
+                <h3 class="port-title-text">
+                    <a href="https://www.youtube.com/watch?v=9HazzZ8huzs"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Pizza Toscana
+                    </a>
+                </h3>
+
+                <p class="port-title-description">
+                    Návrh prezentace pro fiktivní gastronomickou značku.
+                    Zaměřeno na storytelling, vizuální vyprávění a copywriting přizpůsobený cílové skupině.
+                    Koncept, texty i kompletní realizace zajištěny pod jednou střechou.
+                </p>
+            </li>
+
+
+            <li data-aos="fade-up">
+                <div class="video-wrapper">
+                    <lite-youtube
+                        videoid="gUInzYV5f_Q"
+                        playlabel="Rtěnka – Kreativní prezentace značky a obsah pro sociální sítě">
+                    </lite-youtube>
+                </div>
+
+                <h3 class="port-title-text">
+                    <a href="https://www.youtube.com/watch?v=gUInzYV5f_Q"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Rtěnka
+                    </a>
+                </h3>
+
+                <p class="port-title-description">
+                    Kreativní prezentace kolekce rtěnek se zaměřením na budování značky a storytelling.
+                    Obsahuje optimalizovaný obsah pro sociální sítě a reklamní kampaně, propojující poutavé texty s vizuálním zpracováním.
+                    Cílem bylo jasně komunikovat hodnoty značky a vytvořit emocionální vztah k produktu.
+                </p>
+            </li>
+
+
+            <li data-aos="fade-up">
+                <div class="video-wrapper">
+                    <lite-youtube
+                        videoid="YR9551gJP6M"
+                        playlabel="CAN Pilot – Technická prezentace produktu a tvorba obsahu pro průmysl">
+                    </lite-youtube>
+                </div>
+
+                <h3 class="port-title-text">
+                    <a href="https://www.youtube.com/watch?v=YR9551gJP6M"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        CAN Pilot
+                    </a>
+                </h3>
+
+                <p class="port-title-description">
+                    Prezentace detekčního zařízení CAN Pilot se zaměřením na jeho technické funkce a praktické využití.
+                    Prostřednictvím storytellingu jsou výhody produktu představeny srozumitelně a atraktivně.
+                    Obsah byl navržen, napsán a vizuálně zpracován tak, aby přímo oslovil cílovou skupinu a budoval důvěru.
+                </p>
+            </li>
+
+        </ul>
+    </div>
+</section>
+    
 <section id="graphics">
     <h2 class="text-gradient" data-aos="fade-up">Grafika</h2>
     <p class="section-intro">
