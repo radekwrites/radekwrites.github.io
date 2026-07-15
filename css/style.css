@@ -1235,6 +1235,16 @@ button:disabled {
   border: none;
 }
 
+lite-youtube {
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+lite-youtube::before {
+  display: none !important;
+}
+
 /* ===== SEKCE GRAFIKA ===== */
 #graphics h2 {
   text-align: center;
