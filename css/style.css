@@ -1239,10 +1239,6 @@ lite-youtube {
   max-width: none !important;
 }
 
-lite-youtube::before {
-  display: none !important;
-}
-
 /* ===== SEKCE GRAFIKA ===== */
 #graphics h2 {
   text-align: center;
