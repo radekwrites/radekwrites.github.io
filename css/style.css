@@ -1246,8 +1246,17 @@ lite-youtube {
   background-size: cover;
   background-position: center;
   cursor: pointer;
-  border: none !important;     /* Pojistka pro starší verze knihovny */
+  border: none !important;     
   outline: none !important;
+  box-shadow: none !important;
+}
+
+lite-youtube iframe,
+.video-wrapper iframe {
+  border: 0 !important;
+  border-style: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .lty-playbtn {
