@@ -1222,23 +1222,14 @@ button:disabled {
   height: 0;
   overflow: hidden;
   margin-bottom: 1rem;
-  border: none !important;     /* Odstraní případný border wrapperu */
+  border: none !important;     
   border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
+/* Hlavní prvek lite-youtube a všechny jeho stavy */
+lite-youtube,
 .video-wrapper lite-youtube {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none !important;     /* ⬅️ KLÍČOVÉ: Odstraní nativní border */
-  outline: none !important;    /* ⬅️ KLÍČOVÉ: Odstraní outline (např. při focusu) */
-  box-shadow: none !important; /* ⬅️ KLÍČOVÉ: Odstraní případný stín, který může vypadat jako linka */
-  border-radius: 0 !important;
-}
-
-lite-youtube {
-  display: block;
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1247,24 +1238,44 @@ lite-youtube {
   background-position: center;
   cursor: pointer;
   border: none !important;     
+  outline: none !important;    
+  box-shadow: none !important; 
+  border-radius: 0 !important;
+}
+
+/* Odstranění modrého/bílého rámečku při najetí, kliknutí i zaměření klávesnicí */
+lite-youtube:hover,
+lite-youtube:focus,
+lite-youtube:focus-within,
+lite-youtube:active,
+.video-wrapper lite-youtube:hover,
+.video-wrapper lite-youtube:focus,
+.video-wrapper lite-youtube:focus-within {
+  border: none !important;
   outline: none !important;
+  outline-width: 0 !important;
   box-shadow: none !important;
 }
 
+/* Cílení na samotné vnitřní YouTube video (iframe) ve všech stavech */
 lite-youtube iframe,
-.video-wrapper iframe {
-  border: 0 !important;
+.video-wrapper iframe,
+lite-youtube iframe:focus,
+lite-youtube iframe:active {
+  border: none !important;
   border-style: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
-.lty-playbtn {
-    width: 68px;
-    height: 48px;
-    background: rgba(0,0,0,.8);
-    border-radius: 14px;
-    border: 0;
+/* Cílení na spouštěcí tlačítko uprostřed videa a jeho stavy */
+.lty-playbtn,
+lite-youtube .lty-playbtn,
+lite-youtube:hover .lty-playbtn,
+lite-youtube .lty-playbtn:focus {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* ===== SEKCE GRAFIKA ===== */
